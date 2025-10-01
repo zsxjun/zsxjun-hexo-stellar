@@ -1,0 +1,118 @@
+# 您可以在这里创建属于自己的侧边栏组件库，在需要的位置放置自己的组件
+# layout即组件布局，支持自定义的有：
+# - markdown: 渲染 md 文本
+#
+
+ghrepo:
+  layout: ghrepo
+related:
+  layout: related
+
+ghissues:
+  layout: ghissues
+  title: # Recent Issues
+  limit: 3 # 显示的issues最大数量
+  labels: # 过滤只显示具有某些标签的issues
+
+welcome:
+  layout: markdown
+  title: 欢迎来到我的小窝
+  content: |
+    欢迎来到<strong>「钟神秀」</strong>的博客！这里📝我的生活日常、资源分享和踩坑教程，欢迎交流学习！<br>
+    如果你在我的网站遇到什么问题，优先<kbd>CTRL</kbd>+<kbd>F5</kbd>刷新一下~<br>
+    如果你对还有什么问题或者建议，优先<a href="mailto:zsx@zhzsx.cn"><strong>邮箱</strong></a>联系我。
+    <img id="ZYTheme" style="border-radius: 10px;" src="https://api.szfx.top/info-card/?word=欢迎来到「钟神秀」的博客，祝您每天都开心！"/>
+            <br> <hr>
+        今日诗词:  <span id="jinrishici-sentence"> </span>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"> </script>
+
+statement:
+    layout: markdown
+    title: '<br>'
+    content: |
+        <hr>
+        <center>
+        <h4 id="免责声明"> 免责声明 </h4>
+        <p> 本站提供的一切软件、教程和内容信息仅限用于学习和研究目的。</p>
+        <p> 不得将上述内容用于商业或非法用途，否则一切后果自负。</p>
+        <p> 本站信息来自网络收集整理，版权争议与本站无关。</p>
+        <p> 如果有侵权之处请第一时间联系站长删除。敬请谅解! </p>
+        </center>
+
+new_comment:
+  layout: timeline
+  title: 最新评论
+  api: https://twikoo-v1.zhzsx.cn # 此处为 Twikoo 函数，末尾不要加 /
+  type: twikoo
+  limit: 8 # 限制获取数量，默认为 10
+  hide: reply # 是否隐藏回复，不填默认不隐藏
+
+
+# 将其覆盖设置为空，可删除一个默认组件，例如 welcome:
+# Recent update
+recent:
+  layout: recent
+  rss: /atom.xml # /atom.xml # npm i hexo-generator-feed
+  limit: 10 # Count of posts
+
+# 页面树（与当前页面强关联的上下篇文章列表）
+tree:
+  layout: tree
+
+# 本文目录（当前页面内各级标题列表）
+toc:
+  layout: toc
+  list_number: false
+  min_depth: 1
+  max_depth: 6
+  collapse: false # true / false / auto
+  # 编辑本文按钮
+  edit_this_page: # 从开头开始匹配替换
+    '_posts/': # https://github.com/xaoxuu/xaoxuu.com/blob/main/source/_posts/
+    'wiki/stellar/': https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/
+
+# GitHub 用户信息
+ghuser:
+  layout: ghuser
+  username: zsxjun # your github login username
+  avatar: true # show avatar or not
+
+# 本文作者组件，需要先配置作者信息: authors.yml
+author:
+  layout: author
+  avatar: true
+
+# 标签云组件
+tagcloud:
+  layout: tagcloud
+  title: 标签云
+  # 标签云配置
+  min_font: 12
+  max_font: 24
+  amount: 100
+  orderby: name
+  order: 1 # 1, sac 升序；-1, desc 降序
+  color: false # 使用颜色
+  start_color: # 开始的颜色。您可使用十六进位值（#b700ff），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  end_color: # 结束的颜色。您可使用十六进位值（#b700ff），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  show_count: true # 显示每个标签的文章总数
+
+timeline:
+  layout: timeline
+  title: 近期动态
+  api: https://api.zhzsx.cn/?repo=zsxjun/github-issues-moments&per_page=2 # https://api.github.com/repos/xaoxuu/hexo-theme-stellar/issues
+  user: zsxjun # 默认显示所有人的数据，设置名称可过滤为仅显示某人的数据，多个名称用英文逗号隔开，不要加空格
+  limit: 10 # 默认通过 api 上增加 per_page 来设置，如果是友链朋友圈，可通过这个设置数量
+
+latest_comment:
+  layout: timeline
+  title: 最新评论
+  api: # 参照文档获取服务对应的api
+  type: # 选择评论服务
+  limit: 16 # 限制获取数量
+
+tagtree:
+  layout: tagtree
+  expand_all: false # 是否展开所有节点
+  expand_active: true # 是否展开当前节点
+  show_tagcon: true # 是否显示标签 icon

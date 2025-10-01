@@ -1,0 +1,66 @@
+/* source/css/custom.css */
+/* Toast 容器样式（确保在最上层） */
+#theme-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 99999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.4s ease;
+  pointer-events: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 260px;
+}
+
+#theme-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#theme-toast svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* 确保按钮可点击 */
+.mode-button {
+  cursor: pointer;
+}
+
+// 底部文字计数
+
+.post-count {
+    scrollbar-width: none;
+    color: var(--text-p4);
+  }
+
+.totalcount {
+    color: var(--text-p4);
+  }
+
+.page-footer {
+    text-align: center; 
+}
+
+// 面包屑
+.bread-nav div#page-words span.sep: before {
+  content: '|';
+}
+.bread-nav div#page-words span.updated {
+  visibility: hidden;
+}
+.bread-nav: hover div#page-words span.updated {
+  visibility: visible;
+}
+

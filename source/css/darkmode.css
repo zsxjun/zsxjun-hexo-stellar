@@ -1,0 +1,87 @@
+/* 手动深色模式变量覆盖表
+ * 适用于 Hexo-Stellar 主题
+ * 通过 <html data-theme="dark"> 激活
+ -------------------------------------------------- */
+html[data-theme="dark"] {
+  /* 基础色 */
+  --background: hsla(210deg, 8%, 12%, 1);
+  --card: hsla(210deg, 10%, 24%, 1);
+  --text: hsla(210deg, 0%, 100%, 1);
+  --text-reverse: hsla(210deg, 0%, 0%, 1);
+  --text-p1: hsla(210deg, 0%, 100%, 0.8);
+  --text-p2: hsla(210deg, 0%, 100%, 0.7);
+  --text-p3: hsla(210deg, 0%, 100%, 0.5);
+  --text-p4: hsla(210deg, 0%, 100%, 0.4);
+  --text-meta: hsla(210deg, 0%, 100%, 0.2);
+  --text-code: hsla(210deg, 0%, 100%, 0.9);
+  --text-a10: hsla(210deg, 0%, 100%, 0.1);
+  --text-a20: hsla(210deg, 0%, 100%, 0.2);
+
+  /* 背景衍生 */
+  --bg-a20: hsla(210deg, 0%, 0%, 0.2);
+  --bg-a50: hsla(210deg, 0%, 0%, 0.5);
+  --bg-a60: hsla(210deg, 0%, 0%, 0.6);
+  --bg-a75: hsla(210deg, 0%, 0%, 0.75);
+  --bg-a100: hsla(210deg, 0%, 0%, 1);
+
+  /* 区块 & 边框 */
+  --block: hsla(210deg, 24%, 72%, 0.08);
+  --block-border: hsla(210deg, 24%, 72%, 0.12);
+
+  /* 代码高亮 */
+  --text-code: hsla(20, 75%, 60%, 1);
+
+  /* 聊天插件 */
+  --chat-bg: #1f2224;
+  --chat-block: #25282a;
+  --chat-border: #303437;
+  --chat-qq-right-bg: rgba(0, 153, 255, 0.5);
+  --chat-qq-right-text: rgba(255, 255, 255, 0.6);
+  --chat-wechat-news-num: #25282a;
+  --chat-video-button: rgba(37, 40, 42, 0.85);
+  --chat-wechat-right-bg: #305034;
+  --chat-quote-blink-color: rgba(24, 92, 109, 0.15);
+  --chat-wechat-quote-color: #858585;
+  --chat-wechat-quote-bg: rgba(133, 133, 133, 0.1);
+
+  /* 按钮渐变 */
+  --button-hover-bg: rgba(255, 255, 255, 0.15);
+}
+
+/* 移动端纯黑背景 */
+@media screen and (max-width: 667px) {
+  html[data-theme="dark"] {
+    --background: #000;
+  }
+}
+
+/* 彩色标签在深色下的映射（保留官方逻辑） */
+html[data-theme="dark"] .colorful[color="red"] {
+  --theme-border: hsla(4deg, 40%, 24%, var(--alpha));
+  --theme-block: hsla(4deg, 24%, 24%, var(--alpha));
+  --theme-mark: hsla(4deg, 24%, 24%, var(--alpha));
+  --theme-codeblock: hsla(4deg, 12%, 24%, var(--alpha));
+  --text: hsla(4deg, 50%, 75%, 1);
+  --text-p1: hsla(4deg, 80%, 80%, 1);
+  --text-p2: hsla(4deg, 80%, 80%, 0.8);
+  --text-p3: hsla(4deg, 80%, 80%, 0.6);
+  --text-p4: hsla(4deg, 80%, 80%, 0.4);
+  --link: hsla(4deg, 80%, 60%, 1);
+  --link-a20: hsla(4deg, 80%, 60%, 0.2);
+}
+/* ……其他彩色标签同理，按需保留或删减…… */
+
+/* tag-plugin 深色补充 */
+html[data-theme="dark"] .tag-plugin.tag {
+  --theme-border: hsla(192deg, 40%, 24%, var(--alpha));
+  --theme-block: hsla(192deg, 24%, 24%, var(--alpha));
+  --theme-mark: hsla(192deg, 24%, 24%, var(--alpha));
+  --theme-codeblock: hsla(192deg, 12%, 24%, var(--alpha));
+  --text: hsla(192deg, 50%, 75%, 1);
+  --text-p1: hsla(192deg, 80%, 80%, 1);
+  --text-p2: hsla(192deg, 80%, 80%, 0.8);
+  --text-p3: hsla(192deg, 80%, 80%, 0.6);
+  --text-p4: hsla(192deg, 80%, 80%, 0.4);
+  --link: hsla(192deg, 80%, 60%, 1);
+  --link-a20: hsla(192deg, 80%, 60%, 0.2);
+}
