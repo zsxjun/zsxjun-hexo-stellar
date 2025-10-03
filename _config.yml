@@ -168,7 +168,7 @@ hexo_safego:
       - "zhzsx.cn"
   # 页面外观设置
   appearance:
-    avatar: /info/avatar.ico    # 头像路径
+    avatar: https://img.314926.xyz/images/2025/09/20/zsx-avatar.webp   # 头像路径
     title: "ZSXの小站"            # 页面标题
     subtitle: "安全中心"         # 页面副标题
     darkmode: true              # 是否启用深色模式
