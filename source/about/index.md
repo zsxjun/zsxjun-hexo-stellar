@@ -6,9 +6,12 @@ rightbar:
     - timeline
 leftbar:
     - recent
+banner: https://img.314926.xyz/images/2025/09/23/cover-25.webp
+banner_info:
+  title: 关于
+  avatar: https://img.314926.xyz/images/2025/09/20/zsx-avatar.webp
+  subtitle: 克喵的关于页
 ---
-{% banner 「钟神秀」 造化钟神秀，阴阳割昏晓 avatar:https://img.314926.xyz/images/2025/09/20/zsx-avatar.webp bg:https://img.314926.xyz/images/2025/09/23/cover-25.webp %}
-{% endbanner %}
 
 {% poetry 望岳 author:杜甫 footer:诗词节选 %}
 岱宗夫如何？齐鲁青未了。

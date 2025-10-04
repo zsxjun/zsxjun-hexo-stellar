@@ -2,6 +2,11 @@
 title: 鱼塘
 date: 2025-09-27 21:31:50
 menu_id: pyq
+banner: https://img.314926.xyz/images/2025/10/04/cover-37.webp
+banner_info:
+  title: 鱼塘
+  avatar: https://img.314926.xyz/images/2025/09/20/zsx-avatar.webp
+  subtitle: 克喵的鱼塘页
 ---
 
 <div id="friend-circle-lite-root"></div>
